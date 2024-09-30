@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quicklist</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo desktop-only">
+      <img src="assets/logo.png" alt="logo da Quicklist">
+    </div>
+    
+    <div class="header">
+      <a href="#" class="link-button">Voltar</a>
+      <h1>Compras de semana</h1>
+    </div>
+
+    <div class="add-item flex">
+      <input id="item-id" type="text" placeholder="Adicione um novo item">
+      <button>
+        <label for="item-id">Adicionar item</label>
+      </button>
+    </div>
+
+    <div class="item-list">
+      <div class="items">
+        <div class="checkbox"></div>
+        <div class="item">
+          <span>Pão de forma</span>
+        </div>
+        <div class="icon-delete">
+          <img src="assets/icons/delete-small.svg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
