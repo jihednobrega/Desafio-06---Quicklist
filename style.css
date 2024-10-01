@@ -47,7 +47,7 @@ body {
 }
 
 .container {
-  padding: 78px 32px 250px;
+  padding: 4.875rem 2rem 15.625rem;
 
   display: flex;
   flex-direction: column;
@@ -56,7 +56,7 @@ body {
 
 .container > * {
   width: 100%;
-  max-width: 627px;
+  max-width: 39.1875rem;
 }
 
 .flex {
@@ -120,27 +120,27 @@ ul[role="list"] {
 }
 
 .logo {
-  max-height: 40px;
+  max-height: 2.5rem;
   justify-content: center;
 }
 
 .logo img {
-  width: 155px;
-  height: 40px;
+  width: 9.6875rem;
+  height: 2.5rem;
 }
 
 .add-item {
   flex-direction: column;
-  margin-top: 44px;
+  margin-top: 2.75rem;
 
   & input {
     width: 100%;
     height: auto;
 
-    padding: 11px 18px;
+    padding: 0.6875rem 1.125rem;
     background-color: var(--background-secondary);
     border: 2px solid var(--border-primary);
-    border-radius: 12px;
+    border-radius: 0.75rem;
     
     font: var(--paragraph);
 
@@ -161,20 +161,20 @@ ul[role="list"] {
     width: 100%;
     background-color: var(--color-brand);
     border: none;
-    border-radius: 12px;
+    border-radius: 0.75rem;
 
     font: var(--label);
     color: var(--always-white);
-    padding-block: 12px;
+    padding-block: 0.75rem;
   }
 }
 
 .item-list {
-  margin-top: 40px;
+  margin-top: 2.5rem;
 
   & .items {
     padding: 0.75rem;
-    border-radius: 12px;
+    border-radius: 0.75rem;
     background-color: var(--background-secondary);
     display: flex;
     gap: 0.75rem;
@@ -186,15 +186,11 @@ ul[role="list"] {
       height: 1rem;
       background-color: var(--background-secondary);
       border: 1px solid var(--border-primary);
-      border-radius: 6px;
-
-   
+      border-radius: 0.375rem;
 
       &.checked {
         background-color: var(--color-brand);
         border-color: var(--color-brand);
-
-    
       }
     }
   
@@ -216,19 +212,19 @@ ul[role="list"] {
 }
 
 .alert {
-  width: calc(100% - 64px);
-  padding: 12px;
-  border-radius: 12px;
+  width: calc(100% - 4rem);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
   background-color: var(--color-danger);
 
   position: fixed;
-  bottom: 170px;
+  bottom: 10.625rem;
 
   animation: alert 3000ms ease forwards;
 
   & img {
-    width: 20px;
-    height: 20px;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   & span {
@@ -249,7 +245,7 @@ ul[role="list"] {
   }
 
   .container {
-    padding: 25px 0 217px;
+    padding: 1.5625rem 0 13.5625rem;
   }
 
   .container > * {
@@ -258,7 +254,7 @@ ul[role="list"] {
   }
 
   .link-button {
-    margin-top: 62px;
+    margin-top: 3.875rem;
   }
 
   .add-item {
@@ -283,6 +279,7 @@ ul[role="list"] {
       }
     }
   }
+
   .item-list {
     & .items {
       padding: 0.5rem 0.75rem;
@@ -308,7 +305,7 @@ ul[role="list"] {
   }
 
   .alert {
-    bottom: 137px;
+    bottom: 8.5625rem;
 
     & .btn-close {
       cursor: pointer;
