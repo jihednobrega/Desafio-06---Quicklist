@@ -22,20 +22,22 @@
       <h1>Compras de semana</h1>
     </div>
 
-    <div class="add-item flex gap-16">
+    <form class="add-item flex gap-16">
       <input name="item-id" id="item-id" type="text" placeholder="Adicione um novo item">
-      <button>
+      <button type="submit">
         <label for="item-id">Adicionar item</label>
       </button>
-    </div>
+    </form>
 
-    <ul role="list" class="item-list flex flex-col gap-12">
-      <li class="items flex align-center gap-12">
-        <div class="checkbox"></div>
-        <div class="item">
-          <span>Pão de forma</span>
+    <ul role="list" class="item-list flex flex-col gap-12 hide">
+      <li class="items">
+        <div class="checkbox">
+          <img src="assets/icons/check.svg" alt="">
         </div>
-        <div class="icon-delete flex flex-centralized">
+        <div class="item">
+          <span></span>
+        </div>
+        <div class="item-delete flex flex-centralized">
           <img src="assets/icons/trash.svg" alt="">
         </div>
       </li>
@@ -51,5 +53,7 @@
       </div>
     </div>
   </div>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
