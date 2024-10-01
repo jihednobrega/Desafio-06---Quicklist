@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,27 +17,37 @@
       <img src="assets/logo.png" alt="logo da Quicklist">
     </div>
     
-    <div class="header">
-      <a href="#" class="link-button">Voltar</a>
+    <div class="header flex flex-col gap-16">
+      <a href="#" class="link-button"><- Voltar</a>
       <h1>Compras de semana</h1>
     </div>
 
-    <div class="add-item flex">
-      <input id="item-id" type="text" placeholder="Adicione um novo item">
+    <div class="add-item flex gap-16">
+      <input name="item-id" id="item-id" type="text" placeholder="Adicione um novo item">
       <button>
         <label for="item-id">Adicionar item</label>
       </button>
     </div>
 
-    <div class="item-list">
-      <div class="items">
+    <ul role="list" class="item-list flex flex-col gap-12">
+      <li class="items flex align-center gap-12">
         <div class="checkbox"></div>
         <div class="item">
           <span>Pão de forma</span>
         </div>
-        <div class="icon-delete">
-          <img src="assets/icons/delete-small.svg" alt="">
+        <div class="icon-delete flex flex-centralized">
+          <img src="assets/icons/trash.svg" alt="">
         </div>
+      </li>
+    </ul>
+
+    <div class="alert flex align-center gap-8 hide">
+      <div class="alert-icon flex flex-centralized">
+        <img src="assets/icons/warning-circle-filled.svg" alt="">
+      </div>
+      <span>O item foi removido da lista</span>
+      <div class="btn-close flex flex-centralized">
+        <img src="assets/icons/delete-small.svg" alt="">
       </div>
     </div>
   </div>

@@ -9,10 +9,10 @@
 :root {
   --inter: "Inter", sans-serif;
 
-  --title: bold 1.5rem/2rem var(--inter);
-  --label: semibold 1rem/1.25rem var(--inter);
-  --paragraph: medium 1rem/1.25rem var(--inter);
-  --link: medium 0.875rem/1rem var(--inter);
+  --title: 700 1.5rem/2rem var(--inter);
+  --label: 600 1rem/1.25rem var(--inter);
+  --paragraph: 500 1rem/1.25rem var(--inter);
+  --link: 500 0.875rem/1rem var(--inter);
 
   --background-primary: #F4F5FB;
   --background-secondary: #FFFFFF;
@@ -38,12 +38,290 @@ html {
   display: none;
 }
 
+body {
+  background-color: var(--background-primary);
+}
+
+.container {
+  padding: 78px 32px 250px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > * {
+  width: 100%;
+  max-width: 627px;
+}
+
 .flex {
   display: flex;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
+.align-items {
+  align-items: center;
+}
+
+.flex-centralized {
+  justify-content: center;
+  align-items: center;
+}
+
+.gap-8 {
+  gap: 0.5rem;
+}
+
+.gap-16 {
+  gap: 1rem;
+}
+
+.gap-12 {
+  gap: 0.75rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  font: var(--link);
+  color: var(--color-brand);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font: var(--title);
+  color: var(--content-primary);
+}
+
+span {
+  font: var(--paragraph);
+  color: var(--content-secondary);
+}
+
+ul[role="list"] {
+  list-style: none;
+}
+
+.logo {
+  max-height: 40px;
+  justify-content: center;
+}
+
+.logo img {
+  width: 155px;
+  height: 40px;
+}
+
+.add-item {
+  flex-direction: column;
+  margin-top: 44px;
+
+  & input {
+    width: 100%;
+    height: auto;
+
+    padding: 11px 18px;
+    background-color: var(--background-secondary);
+    border: 2px solid var(--border-primary);
+    border-radius: 12px;
+    
+    font: var(--paragraph);
+
+    &::placeholder {
+      color: var(--content-tertiary);
+    }
+
+    &:active {
+      border-color: var(--color-brand);
+    }
+
+    &:focus-within {
+      border-color: var(--color-brand);
+    }
+  }
+
+  & button {
+    width: 100%;
+    background-color: var(--color-brand);
+    border: none;
+    border-radius: 12px;
+
+    font: var(--label);
+    color: var(--always-white);
+    padding-block: 12px;
+  }
+}
+
+.item-list {
+  margin-top: 40px;
+
+  & .items {
+    padding: 0.75rem;
+    border-radius: 12px;
+    background-color: var(--background-secondary);
+    align-items: center;
+
+    & .checkbox {
+      max-width: 1rem;
+      width: 100%;
+      height: 1rem;
+      background-color: var(--background-secondary);
+      border: 1px solid var(--border-primary);
+      border-radius: 6px;
+    }
+  
+    & .item {
+      width: 100%;
+    }
+
+    & .icon-delete {
+      max-width: 2rem;
+      width: 100%;
+      height: 2rem;
+
+      & img {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
+}
+
+.alert {
+  width: calc(100% - 64px);
+  padding: 12px;
+  border-radius: 12px;
+  background-color: var(--color-danger);
+
+  position: fixed;
+  bottom: 170px;
+
+  animation: alert 3000ms ease forwards;
+
+  & img {
+    width: 20px;
+    height: 20px;
+  }
+
+  & span {
+    width: 100%;
+    font: var(--label);
+    color: var(--always-white);
+  }
+
+  &.hide {
+    animation: none;
+    display: none;
+  }
+}
+
 @media (width >= 80em) {
   .desktop-only {
-    display: block;
+    display: flex;
   }
+
+  .container {
+    padding: 25px 0 217px;
+  }
+
+  .container > * {
+    width: 100%;
+    height: auto;
+  }
+
+  .link-button {
+    margin-top: 62px;
+  }
+
+  .add-item {
+    flex-direction: row;
+    justify-content: space-between;
+
+    & input:hover {
+      border-color: var(--border-hover);
+    }
+
+    & button {
+      max-width: 10rem;
+
+      cursor: pointer;
+
+      & label {
+        pointer-events: none;
+      }
+
+      &:hover {
+        background-color: var(--color-brand-hover);
+      }
+    }
+  }
+  .item-list {
+    & .items {
+      padding: 0.5rem 0.75rem;
+      
+      & .checkbox {
+        cursor: pointer;
+      
+        &:hover {
+          border-color: var(--border-hover);
+        }
+      }
+
+      & .icon-delete {
+        cursor: pointer;
+
+        transition: scale 400ms;
+
+        &:hover {
+          scale: 1.2;
+        }
+      }
+    }
+  }
+
+  .alert {
+    bottom: 137px;
+
+    & .btn-close {
+      cursor: pointer;
+
+      transition: scale 400ms;
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+  }
+}
+
+@keyframes alert {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+  
 }
